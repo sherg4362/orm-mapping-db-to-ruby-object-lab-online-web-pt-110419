@@ -82,7 +82,7 @@ def self.all
   def self.first_X_students_in_grade_10(num)
     first_x_students_from_grade_10 = []
     sql = <<-SQL
-      SELECT * FROM studetns
+      SELECT * FROM students
       WHERE grade = 10
       LIMIT ?
       SQL
