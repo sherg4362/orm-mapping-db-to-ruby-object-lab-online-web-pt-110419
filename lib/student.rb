@@ -102,7 +102,10 @@ def self.all
       SQL
       
       DB[:conn].execute(sql, grade).map do |row|
-        
+        students_of_grade_x << self.new_from_db(row)
+      end
+      
+      students_of_grade_x
   end
   
   def save
