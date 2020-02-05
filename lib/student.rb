@@ -87,7 +87,7 @@ def self.all
       SQL
       
       DB[:conn].execute(sql, num).map do |row|
-        
+        self.
       end
       
   end
