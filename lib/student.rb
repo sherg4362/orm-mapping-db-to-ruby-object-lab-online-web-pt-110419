@@ -86,7 +86,9 @@ def self.all
       LIMIT ?
       SQL
       
-      DB[:conn].execute(sql, num)
+      DB[:conn].execute(sql, num).map do
+        
+      end
       
   end
   
