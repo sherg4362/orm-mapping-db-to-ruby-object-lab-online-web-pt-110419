@@ -86,6 +86,8 @@ def self.all
       LIMIT ?
       SQL
       
+      DB[:conn].execute(sql, )
+      
   end
   
   def save
