@@ -80,6 +80,7 @@ def self.all
   end
   
   def self.first_X_students_in_grade_10(num)
+    first_x_students_from_grade_10 = []
     sql = <<-SQL
       SELECT * FROM studetns
       WHERE grade = 10
@@ -87,9 +88,10 @@ def self.all
       SQL
       
       DB[:conn].execute(sql, num).map do |row|
-        self.new_from_db(row)
+        first_x_students_from_grade_10 << self.new_from_db(row)
       end
-      
+    
+    first_x_students_from_grade_10  
   end
   
   def save
