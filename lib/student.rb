@@ -79,14 +79,14 @@ def self.all
       end.first
   end
   
-  def self.first_X_students_in_grade_10
+  def self.first_X_students_in_grade_10(num)
     sql = <<-SQL
       SELECT * FROM studetns
       WHERE grade = 10
       LIMIT ?
       SQL
       
-      DB[:conn].execute(sql, )
+      DB[:conn].execute(sql, num)
       
   end
   
