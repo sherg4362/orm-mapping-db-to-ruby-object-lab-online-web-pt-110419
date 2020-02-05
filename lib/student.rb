@@ -97,6 +97,8 @@ def self.all
   def self.all_students_in_grade_X(grade)
     students_of_grade_x = []
     sql = <<-SQL
+      SELECT * FROM students
+      WHERE grade = ?
   end
   
   def save
